@@ -11,6 +11,10 @@
   },
   "author": "Devan Non <devanon@chainstride.capital>",
   "license": "Apache-2.0",
+  "dependencies": {
+    "@openzeppelin/contracts": "4.7.3",
+    "ethers-eip712": "0.2.0"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
@@ -26,6 +30,7 @@
     "hardhat-preprocessor": "^0.1.4",
     "ts-node": "^10.7.0",
     "typechain": "^8.0.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "dotenv": "^10.0.0"
   }
 }
