@@ -160,10 +160,15 @@ async function main() {
         hashDigest_onChain
     );
     // [X] verify
+    // const signedCondition_type = await signer._signTypedData(); // EIP-712 specification.
+
     const signedCondition = await signer.signMessage(message);
     const addressRevodered = utils.verifyMessage(message, signedCondition);
+
     console.log("addressRevodered---", addressRevodered);
     let signatureCondition = utils.splitSignature(signedCondition);
+    console.log("signatureCondition----", signatureCondition);
+
     const verifyCondition = await hotBuyFactory.verifyCondition(
         condition,
         signatureCondition.v,
